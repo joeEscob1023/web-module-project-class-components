@@ -1,0 +1,4 @@
+.task.completed {
+  width: 30%;
+  text-decoration: line-through;
+}

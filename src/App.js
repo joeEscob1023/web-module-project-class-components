@@ -3,6 +3,8 @@ import TodoList from "./components/TodoList";
 import TodoForm from "./components/TodoForm";
 import { v4 as uuid } from "uuid";
 
+import "../src/Todo.css";
+
 const todoList = [
   {
     task: "Organize Garage",
@@ -24,6 +26,22 @@ class App extends React.Component {
     };
   }
 
+  toggleTask = (id) => {
+    this.setState({
+      ...this.state.todos,
+      todos: this.state.todos.map((todo) => {
+        if (todo.id === id) {
+          return {
+            ...todo,
+            completed: !todo.completed,
+          };
+        } else {
+          return todo;
+        }
+      }),
+    });
+  };
+
   addTask = (task) => {
     const newTask = {
       task: task,
@@ -43,7 +61,7 @@ class App extends React.Component {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <TodoList todos={this.state.todos} />
+        <TodoList toggleTask={this.toggleTask} todos={this.state.todos} />
         <TodoForm addTask={this.addTask} />
       </div>
     );
