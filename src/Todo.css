@@ -1,0 +1,44 @@
+.task.completed {
+  width: 30%;
+  text-decoration: line-through;
+}
+
+.app {
+  text-align: center;
+  background-color: rgb(240 248 255);
+  padding: 5%;
+}
+
+.app h2 {
+  font-family: monospace;
+  background-color: aquamarine;
+  width: 25%;
+  margin: 0 auto;
+}
+
+button {
+  margin: 0.5%;
+}
+
+.clearBtn {
+  width: 25%;
+}
+
+.task {
+  font-family: cursive;
+  border-radius: 50%;
+  width: 25%;
+}
+
+.task:nth-child(even) {
+  background: rgb(228, 224, 224);
+  color: black;
+  width: 25%;
+  margin: 0 auto;
+}
+
+.task:nth-child(odd) {
+  background: rgb(7, 93, 82);
+  color: #fff;
+  margin: 0 auto;
+}
